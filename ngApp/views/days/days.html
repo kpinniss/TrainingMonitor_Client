@@ -1,0 +1,24 @@
+
+<div class="col-lg-4 col-lg-offset-1">
+    <h2>Days</h2>
+<div class="panel panel-default" >
+    <div class="panel-heading">Day: {{vm.day.dayNumber}}</div>
+
+        <ul class="unstyled list-inline" >
+            <li ng-repeat="comp in vm.day.coreComps">{{comp}}</li>
+        </ul>
+        <table class="table table-striped">
+            <tr ng-repeat="l in vm.day.lessons">
+                <td>
+                    <a class="btn btn-primary btn-lg btnTab" ui-sref="lessons({id:l.id})">Lesson: {{l.lessonNumber}}</a>
+                    <a href=""><span class="glyphicon glyphicon-pencil pull-right glyphyMd"></span></a>
+                    <br>
+                    <a href=""><span class="glyphicon glyphicon-remove pull-right glyphyMd"></span></a>
+                </td>
+            </tr>
+        </table>
+</div>
+</div>
+
+
+

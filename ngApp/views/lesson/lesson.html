@@ -1,0 +1,11 @@
+<h2>Lesson</h2>
+
+<div class="panel col-lg-3 col-lg-offset-1" >
+    <div class="panel-heading">Lesson: {{vm.lesson.lessonNumber}}</div>
+    <div class="panel-body">
+
+        <ul class="unstyled list-inline" >
+            <li ng-repeat="comp in vm.lesson.comps">{{comp}}</li>
+        </ul>
+    </div>
+</div>

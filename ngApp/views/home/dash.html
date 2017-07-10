@@ -1,0 +1,39 @@
+
+
+<div class="col-lg-4 col-lg-offset-1">
+    <h1 class="h1">{{vm.message}}</h1>
+<div class="panel panel-default">
+    <div class="panel-heading">Weeks</div>
+        <div>
+            <table class="table table-striped">
+    <thead>
+            </thead>
+                <tbody>
+                    <tr ng-repeat="week in vm.weeks">
+                        <td>
+     <!---DropDown Selection---->                       
+    <div class="dropdown ">
+    <button class="btn btn-primary btn-lg dropdown-toggle btnTab" type="button" data-toggle="dropdown">Week: {{week.weekNumber}}
+    
+    <span class="caret"></span>
+    </button>   
+    <a href=""><span class="glyphicon glyphicon-pencil pull-right glyphyMd"></span></a>
+    <br>
+    <a href=""><span class="glyphicon glyphicon-remove pull-right glyphyMd"></span></a>
+    <ul class="unstyled list-inline">
+        <li class="slightLeft" ng-repeat="comp in week.coreComps">{{comp}}</li>
+    </ul>
+    <ul style="margin-top:-3%" class="dropdown-menu">
+      <li ng-repeat="day in week.days"><a ui-sref="days({id:day.id})">Day: {{day.dayNumber}}</a> 
+      <span ng-repeat="comp in day.coreComps">- {{comp}} </span>
+      </li>
+      
+    </ul>
+  </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</div>
+</div>
